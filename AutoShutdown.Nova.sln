@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoShutdown.Shared", "src\AutoShutdown.Shared\AutoShutdown.Shared.csproj", "{3AB9CDCA-195C-5B70-8057-CA49B8938782}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoShutdown.Admin", "src\AutoShutdown.Admin\AutoShutdown.Admin.csproj", "{B8FA59A8-4EB5-53E0-BE76-B97DBE260DBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoShutdown.Client", "src\AutoShutdown.Client\AutoShutdown.Client.csproj", "{6D3B37D2-1EA4-560D-A3B0-E9D00913BCD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoShutdown.DeploymentService", "src\AutoShutdown.DeploymentService\AutoShutdown.DeploymentService.csproj", "{21B0C59C-5AEB-52B2-BDD8-F7DCA9DC720A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminSecurityChecks", "tests\AdminSecurityChecks\AdminSecurityChecks.csproj", "{34F02BB7-6DF3-5CC3-8DA9-DF496F899489}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstallBatchChecks", "tests\InstallBatchChecks\InstallBatchChecks.csproj", "{F2B4D3CD-7C4C-5F45-BC85-2D881F5772E1}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {3AB9CDCA-195C-5B70-8057-CA49B8938782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {3AB9CDCA-195C-5B70-8057-CA49B8938782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {3AB9CDCA-195C-5B70-8057-CA49B8938782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {3AB9CDCA-195C-5B70-8057-CA49B8938782}.Release|Any CPU.Build.0 = Release|Any CPU
+        {B8FA59A8-4EB5-53E0-BE76-B97DBE260DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {B8FA59A8-4EB5-53E0-BE76-B97DBE260DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {B8FA59A8-4EB5-53E0-BE76-B97DBE260DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {B8FA59A8-4EB5-53E0-BE76-B97DBE260DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+        {6D3B37D2-1EA4-560D-A3B0-E9D00913BCD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {6D3B37D2-1EA4-560D-A3B0-E9D00913BCD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {6D3B37D2-1EA4-560D-A3B0-E9D00913BCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {6D3B37D2-1EA4-560D-A3B0-E9D00913BCD6}.Release|Any CPU.Build.0 = Release|Any CPU
+        {21B0C59C-5AEB-52B2-BDD8-F7DCA9DC720A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {21B0C59C-5AEB-52B2-BDD8-F7DCA9DC720A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {21B0C59C-5AEB-52B2-BDD8-F7DCA9DC720A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {21B0C59C-5AEB-52B2-BDD8-F7DCA9DC720A}.Release|Any CPU.Build.0 = Release|Any CPU
+        {34F02BB7-6DF3-5CC3-8DA9-DF496F899489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {34F02BB7-6DF3-5CC3-8DA9-DF496F899489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {34F02BB7-6DF3-5CC3-8DA9-DF496F899489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {34F02BB7-6DF3-5CC3-8DA9-DF496F899489}.Release|Any CPU.Build.0 = Release|Any CPU
+        {F2B4D3CD-7C4C-5F45-BC85-2D881F5772E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {F2B4D3CD-7C4C-5F45-BC85-2D881F5772E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {F2B4D3CD-7C4C-5F45-BC85-2D881F5772E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {F2B4D3CD-7C4C-5F45-BC85-2D881F5772E1}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+EndGlobal

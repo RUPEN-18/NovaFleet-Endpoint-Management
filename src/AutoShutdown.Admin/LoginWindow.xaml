@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Class="AutoShutdown.Admin.LoginWindow" Title="L&amp;T Admin — Sign in" Width="600" Height="760" MinWidth="500" MinHeight="650" WindowStartupLocation="CenterScreen">
+
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="52,36">
+
+
+            <Image Source="Assets/lt-logo.png" Width="80" Height="80" HorizontalAlignment="Left"/>
+
+
+            <TextBlock Text="L&amp;T Admin" FontSize="30" FontWeight="Bold" Margin="0,18,0,8"/>
+
+
+            <TextBlock x:Name="IntroText" Text="Sign in to manage your client PCs." TextWrapping="Wrap" Foreground="{StaticResource BrushMuted}" Margin="0,0,0,22"/>
+
+
+            <TextBlock Text="Username"/>
+            <TextBox x:Name="UsernameBox" MaxLength="64" Margin="0,6,0,16"/>
+
+
+            <StackPanel x:Name="SetupFields" Visibility="Collapsed">
+                <TextBlock Text="Display name"/>
+                <TextBox x:Name="DisplayNameBox" MaxLength="120" Margin="0,6,0,16"/>
+            </StackPanel>
+
+
+            <TextBlock Text="Password"/>
+            <PasswordBox x:Name="PasswordBox" MaxLength="128" Padding="10" Margin="0,6,0,12"/>
+
+
+            <TextBlock Text="New accounts need a password of at least 12 characters." Style="{StaticResource Caption}" TextWrapping="Wrap"/>
+
+
+            <TextBlock x:Name="ErrorText" Foreground="{StaticResource BrushDanger}" TextWrapping="Wrap" Margin="0,12"/>
+
+
+            <Button x:Name="LoginButton" Content="Sign in" IsDefault="True" Style="{StaticResource PrimaryButton}" Click="Login_Click" Height="46"/>
+
+
+            <Expander Header="Recover Super Admin access" Margin="0,20,0,0">
+                <StackPanel Margin="0,12,0,0">
+
+
+                    <TextBlock Text="Use the private recovery code saved when the first Super Admin was created." TextWrapping="Wrap"/>
+
+
+                    <TextBlock Text="Recovery code" Margin="0,10,0,5"/>
+                    <PasswordBox x:Name="RecoveryBox" MaxLength="64" Padding="10"/>
+
+
+                    <TextBlock Text="New password" Margin="0,10,0,5"/>
+                    <PasswordBox x:Name="NewPasswordBox" MaxLength="128" Padding="10"/>
+
+
+                    <Button Content="Reset password" Style="{StaticResource GlowButton}" Click="Recovery_Click" Margin="0,12,0,0"/>
+
+
+                </StackPanel>
+            </Expander>
+
+
+        </StackPanel>
+    </ScrollViewer>
+
+
+</Window>

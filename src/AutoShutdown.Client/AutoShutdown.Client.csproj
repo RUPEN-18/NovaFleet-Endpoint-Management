@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <Version>0.5.5</Version>
+    <InformationalVersion>0.5.5-recovered</InformationalVersion>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <AssemblyName>AutoShutdown.SystemB</AssemblyName>
+    <RootNamespace>AutoShutdown.Client</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoShutdown.Shared\AutoShutdown.Shared.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="10.0.13" />
+    <None Update="appsettings.example.json">
+      <TargetPath>appsettings.json</TargetPath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

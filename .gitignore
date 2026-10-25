@@ -1,0 +1,50 @@
+# Build and IDE output
+**/bin/
+**/obj/
+.vs/
+.vscode/
+*.user
+*.suo
+TestResults/
+artifacts/
+publish/
+releases/
+LT-MSI-*/
+*-Backups/
+# Installer binaries and temporary data
+*.msi
+*.msp
+*.exe
+*.dll
+*.pdb
+*.zip
+*.tmp
+*.log
+*.dmp
+# Machine credentials and private runtime records
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+*.pem
+*.nova-pairing.json
+*Recovery*.txt
+**/connection.json
+**/secrets.json
+**/appsettings.json
+**/appsettings.*.json
+!**/appsettings.example.json
+**/admin-accounts.json
+**/admin-audit.jsonl
+**/install-jobs.json
+**/deployment-network.json
+**/settings-cache.json
+**/job.json
+**/activity.json
+**/service-status.json
+**/media/
+# Windows files
+Thumbs.db
+Desktop.ini

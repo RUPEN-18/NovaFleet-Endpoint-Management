@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+ <Package Name="L&amp;T Admin" Manufacturer="L&amp;T Admin Project" Version="0.5.5" UpgradeCode="B09D10C2-A99C-4938-A93D-5E615C014BFA" Scope="perMachine" InstallerVersion="500" Language="1033">
+  <MajorUpgrade Schedule="afterInstallInitialize" DowngradeErrorMessage="A newer L&amp;T Admin is already installed."/>
+  <MediaTemplate EmbedCab="yes" CompressionLevel="high"/>
+  <Property Id="ARPNOMODIFY" Value="1"/><Property Id="ARPNOREPAIR" Value="1"/><Property Id="MSIRESTARTMANAGERCONTROL" Value="Disable"/>
+  <Launch Condition="NOT Installed OR REMOVE=&quot;ALL&quot;" Message="Repair/modify are disabled. Close Admin and finish its jobs before updating."/>
+  <SetProperty Id="AdminPreflight" Before="AdminPreflight" Sequence="execute" Value="&quot;[System64Folder]WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand $(PreflightEncoded)"/>
+  <CustomAction Id="AdminPreflight" BinaryRef="Wix4UtilCA_$(sys.BUILDARCHSHORT)" DllEntry="WixQuietExec" Execute="deferred" Impersonate="no" Return="check"/>
+  <InstallExecuteSequence><Custom Action="AdminPreflight" Before="InstallFiles" Condition="1"/></InstallExecuteSequence>
+  <StandardDirectory Id="ProgramFiles64Folder"><Directory Id="ADMINROOT" Name="AutoShutdown.Nova.Admin"><Directory Id="ADMINSCRIPTS" Name="scripts"/></Directory></StandardDirectory>
+  <StandardDirectory Id="ProgramMenuFolder"><Directory Id="ADMINMENU" Name="L&amp;T Admin"/></StandardDirectory>
+  <ComponentGroup Id="AdminPayload" Directory="ADMINROOT">
+   <Files Include="$(AppPublish)\**"><Exclude Files="$(AppPublish)\AutoShutdown.SystemA.exe"/></Files>
+   <Component Id="AdminExecutable" Guid="*"><File Id="AdminExe" Source="$(AppPublish)\AutoShutdown.SystemA.exe" KeyPath="yes"><Shortcut Id="AdminShortcut" Directory="ADMINMENU" Name="L&amp;T Admin" WorkingDirectory="ADMINROOT" Advertise="yes"/></File></Component>
+  </ComponentGroup>
+  <ComponentGroup Id="AdminScripts" Directory="ADMINSCRIPTS"><Files Include="$(SupportScripts)\**"/></ComponentGroup>
+  <ComponentGroup Id="AdminIntegration">
+   <Component Id="AdminBinaryFolder" Directory="ADMINROOT" Guid="D042CA79-FA6E-4CD5-BEA0-F9408D211228"><CreateFolder><PermissionEx Sddl="O:BAG:BAD:P(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;AU)"/></CreateFolder></Component>
+   <Component Id="AdminMenu" Directory="ADMINMENU" Guid="*"><RemoveFolder Id="AdminMenuRemove" On="uninstall"/><RegistryValue Root="HKLM" Key="Software\AutoShutdown.Nova\AdminMsi" Name="InstallDirectory" Type="string" Value="[ADMINROOT]" KeyPath="yes"/></Component>
+  </ComponentGroup>
+  <Feature Id="Complete" Title="L&amp;T Admin" Level="1"><ComponentGroupRef Id="AdminPayload"/><ComponentGroupRef Id="AdminScripts"/><ComponentGroupRef Id="AdminIntegration"/></Feature>
+ </Package>
+</Wix>

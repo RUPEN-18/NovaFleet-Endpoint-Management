@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>AutoShutdown.DeploymentService</AssemblyName>
+    <RootNamespace>AutoShutdown.DeploymentService</RootNamespace>
+    <Version>0.5.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoShutdown.Shared\AutoShutdown.Shared.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="10.0.12" />
+  </ItemGroup>
+</Project>

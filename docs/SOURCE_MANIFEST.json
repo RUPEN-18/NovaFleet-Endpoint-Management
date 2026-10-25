@@ -1,0 +1,530 @@
+[
+    {
+        "Path":  ".gitattributes",
+        "Sha256":  "eee1c81da153cc19c50c079ebc77d204821bb69cf67730f148938b0b973d7e13"
+    },
+    {
+        "Path":  ".github/workflows/windows-build.yml",
+        "Sha256":  "70672275e95a22cc5290bd4b6120fd7fa5044b9b4a5030d27c1f80096bd40f79"
+    },
+    {
+        "Path":  ".gitignore",
+        "Sha256":  "8439cba883701691fac0541d0ea49ea7f97e0ad40bb1ed2825106fc53df567ea"
+    },
+    {
+        "Path":  "AutoShutdown.Nova.sln",
+        "Sha256":  "e0dbd012fbd6494a00cad3a5b4e40931dbd27c32a9199acbaf86c5592a8e4aef"
+    },
+    {
+        "Path":  "Directory.Build.props",
+        "Sha256":  "cd91f25740d405f68ea08433e460e615e2ce0d9c23cba2c948d7792a528d31d2"
+    },
+    {
+        "Path":  "README.md",
+        "Sha256":  "1e880e2546d638f4792e07a091df60493ad406f4dbc6e7aaa65d0c776a69c446"
+    },
+    {
+        "Path":  "SECURITY.md",
+        "Sha256":  "1424ff8f7de4d3d2db67cf97c19eacdbc2367b70a5b827ca95fa28ce2efb555e"
+    },
+    {
+        "Path":  "docs/GITHUB_UPLOAD.md",
+        "Sha256":  "c56028ba956bf8531d1fec05529d3914bb3ea9ed60bd69ef9ac629c5a3225eb9"
+    },
+    {
+        "Path":  "docs/RECOVERY.md",
+        "Sha256":  "87d1c4d83f2193e84e694fc1aeaefe248c5a079b2d941b11517e6c8627e2360a"
+    },
+    {
+        "Path":  "docs/USER_GUIDE.md",
+        "Sha256":  "2bf640d1f1261bfa2e50c4cbb66022bccb3a261ea9e9f882c9a6b00a7b89dee9"
+    },
+    {
+        "Path":  "docs/VALIDATION.md",
+        "Sha256":  "855beda80dcf9c46cef77af04c63d15e5a6fe60e3e4d8cc26c68877573956235"
+    },
+    {
+        "Path":  "scripts/Configure-DeploymentLanFirewall.ps1",
+        "Sha256":  "03d4b82ef361f085c06399e41a0e6af66bd6d61fcd8ebd029b95700517e7a321"
+    },
+    {
+        "Path":  "scripts/DeploymentService-Common.ps1",
+        "Sha256":  "cca7a6863b257bc973bf6a629b043a568a2e1bc0d8145e7462eea27fe0ddd5a9"
+    },
+    {
+        "Path":  "scripts/Import-DeploymentConnection.ps1",
+        "Sha256":  "e1e1cc641de3e5d03ec111020a4d55080eb8ee09a86a1f3061c65d5c90f9173f"
+    },
+    {
+        "Path":  "scripts/Test-DeploymentService.ps1",
+        "Sha256":  "a392eb0dfaa3d68a778d3882bc738491fba9fa5844cd23db9d05d34ca27ca96e"
+    },
+    {
+        "Path":  "scripts/Uninstall-DeploymentService.ps1",
+        "Sha256":  "ad73424a03ae65b7b249edef6c2b47d6bf8b2d3e16c61ede2371f7b321fa001c"
+    },
+    {
+        "Path":  "scripts/Verify-RecoveredSource.ps1",
+        "Sha256":  "7d4a900a90b73460d20d185bbf8d906ab79693f6d58ce9870b9d35174b5a84d6"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/App.xaml",
+        "Sha256":  "ea375dd2c9374a4d0ed126f9d27c1c47dc5c80a7d1fa65d950c8d801270914b0"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/App.xaml.cs",
+        "Sha256":  "9e85be85f06a91f9bc59d06cb452ffb477cf199344a640ad123e0a526aa47d76"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Assets/lt-logo.png",
+        "Sha256":  "f0bbcc15a301a5e775b05ef7c071436f4bbe8bd166ba49749e0f365f36e875c2"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/AutoShutdown.Admin.csproj",
+        "Sha256":  "af4231db0a033c5cc3bb60f5a35af36729eeefee98cee3ef4178fb507c8754d9"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/ActionDispatcher.cs",
+        "Sha256":  "e29eaf50080ff2ed453c3af4513fc2190a740d8fcff13f69bae41f047086a773"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/AdminActionEndpoint.cs",
+        "Sha256":  "367169b3d91051d47df40cd33040e5b6f69492809523c985d98af06be78fc51f"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/AdminSecurityStore.cs",
+        "Sha256":  "888485f8bdd47371730e41b9775cf27baaee40f12becc4153a4ce213dbdba3a1"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/AdminServer.cs",
+        "Sha256":  "e9897c3e3846a068f94bdf9ec5138616f4525920aabb3d97e63a8606052b64fc"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/AdminSessionEndpoints.Auth.cs",
+        "Sha256":  "0ddfd67d007a27336d5aea15be27319d5fe2ac3c6f12af5d1c9e4c713b663d5f"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/AdminSessionEndpoints.cs",
+        "Sha256":  "bfceed2a1e93a96e61cf4b5f200e7717606b66da9139cd154e76c903949a1163"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/ClientControlAuthentication.cs",
+        "Sha256":  "c5a742214d7a6a2cbbac1a0ab768d3c36e11e470447d6be157a631b2149a05a3"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/ClientHub.cs",
+        "Sha256":  "8e9cf34f2bb882122c3cba00cef9a5cdd0aeb17f912276cadc6f06ad3b891080"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/ClientRegistry.cs",
+        "Sha256":  "2651ddd75ca18066a84e60b9d98089f4b4ffa50fe4398c779f0a784033263a5d"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/DeploymentBootstrap.cs",
+        "Sha256":  "7b66bbf7b4467c34131b2c25e1f99c4bd6b5e644439d66d8427d14cad90a40bd"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/DeploymentTestDispatcher.cs",
+        "Sha256":  "c1fde03e607b6d3ff8a14dfe784b6448f45188dda2bf83335f7e663ace857508"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/DeploymentTestStore.cs",
+        "Sha256":  "e5c0e7e7407154f41800ce4075b8edc046873f6b4a02b22e61c34536477b8cbd"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/InstallAuthentication.cs",
+        "Sha256":  "472c750f9d26a14ec0cafba265d8af308d1dad5cb75da9fdb8d26163d8b2bf54"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/InstallBatchEndpoints.cs",
+        "Sha256":  "900546c418e9b7628c1696216407288757894770d03f3979974b20ca1209dbce"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/InstallServer.cs",
+        "Sha256":  "e0b9b21efe65385d51de1a9af537339b6ddc09991a99fb4212c342f7268844a8"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/InstallStore.Batch.cs",
+        "Sha256":  "a26ebc68542e028384134d5ccba9430ae4b3cb9b1666448aa6dba4ea65dc4bd7"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/InstallStore.Management.cs",
+        "Sha256":  "fb8401702c94302f5bff1723c9d7241e5326af62590b3dbeb96103c5bd4f2b14"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/InstallStore.cs",
+        "Sha256":  "546b985da233ee335e22860013fef8b9b11c6c85ba60e354e5f590f4565b902b"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/ProtectedAdminFiles.cs",
+        "Sha256":  "c68ebde5ff6e23ac0beaa6def6d39846d51c9e171a1c5f35e542f03a7c84778e"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/ScheduleWorker.cs",
+        "Sha256":  "a2998c5997be352af5590be1bb34ef44b4ca1b95cdff454b7de53a77e867e886"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/ServerOptions.cs",
+        "Sha256":  "aecb3c438d43596873be2adfcde8f23fcfda0688a0ed792dbc098dd6c0220955"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/StartupManager.cs",
+        "Sha256":  "186c2787b1523e69e031b38352e8a9a25e18d47cab9a8837832a2928a33926f8"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Infrastructure/StateStore.cs",
+        "Sha256":  "09dc943038a852ae8caa5a85407933217168bf6bbabeb5a6fd384f9d4be0f0e3"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/LoginWindow.xaml",
+        "Sha256":  "672a8201fbc6a512615f58790050c3a147ba3eb02d32532a085915c04e156488"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/LoginWindow.xaml.cs",
+        "Sha256":  "f398bb49e5878619ade1eac5b28e1f16490a2e327bb8883e82d3861f965aba10"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/MainWindow.Deployments.cs",
+        "Sha256":  "410fe7aeaf10ad56876c0e292777473efd80f922b5fe728f2387d5fe5b7ff6bb"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/MainWindow.Inactivity.cs",
+        "Sha256":  "82443f448083bb482b42e692f06bcf8d7b1eb6571bf1d9fda0b5e21bf6897b1e"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/MainWindow.Installation.Batch.cs",
+        "Sha256":  "a2ac61a3b28c264387a2adeaf307634b82fec68686ba40691627b13591db6220"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/MainWindow.Installation.cs",
+        "Sha256":  "96051bac73244312899967844864571988f5be8fc1760e1281388e0527b992d6"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/MainWindow.Management.cs",
+        "Sha256":  "f8991513345c0b43ad9398ecf16da9ffdad912d50cb606133cdc12c663c192e7"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/MainWindow.xaml",
+        "Sha256":  "fa846995f71e909609bdfb12209467d1a333a7e48eac66a811803f4b16ce33e7"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/MainWindow.xaml.cs",
+        "Sha256":  "abe3a58bf75cb4ad7711932d65711e826d0f9b9e9932dba138ad4a81b48c82d5"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Services/AdminApiClient.cs",
+        "Sha256":  "385870362bcb1d82a34439a202a8798296e7b8b8e6e7548b4f70b03938aee3b4"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Services/ApiError.cs",
+        "Sha256":  "82dadf61be5b22d00085e3f6a873d16f859726cac2dfc4421cb5a0c02c0949ca"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Services/AuthApiClient.cs",
+        "Sha256":  "8cef1c46ba816289961e48d4a6307291b285da47aa973dd82f99c94bf7014f63"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Services/InstallApiClient.cs",
+        "Sha256":  "26d4db7198ce860b18e4892aeb1f5d6acf1fb45742178ed059a20284f906aa82"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/Theme.xaml",
+        "Sha256":  "21aa3b5f2f84e91b579779ed5d8d9e809798429e3dbfeb465c049145590a092a"
+    },
+    {
+        "Path":  "src/AutoShutdown.Admin/appsettings.example.json",
+        "Sha256":  "a054f8d32936abfc53709400cbbd44fac9fb78bc3ad14e2e83ec40e8b13fb852"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/App.xaml",
+        "Sha256":  "087301ef9f9154cb6589a3eea4c446de25d42562148ab48be8281400be4172b0"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/App.xaml.cs",
+        "Sha256":  "664b84bd31a598586cb11fcfebcf8c1f85802a3f9e7802c8671602b64783a8c0"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/AutoShutdown.Client.csproj",
+        "Sha256":  "bc099a5ddc5cae62326287c7b2e13ea344b354764f42dc8059978ff20fd977b6"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/ClientWindow.xaml",
+        "Sha256":  "49892280d142a0b8ad3671b19938703bd6677561354529c271c5746be3983d2f"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/ClientWindow.xaml.cs",
+        "Sha256":  "a26b6158d51ca96e46b745a29ef6d7c6fdfef9bffe264a559df1a870fdf9153e"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/IdleOverlayWindow.xaml",
+        "Sha256":  "486c55db75d05a59ffbcfe686cff223a840d9b34ba4e21a7191e5119b19a00a1"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/IdleOverlayWindow.xaml.cs",
+        "Sha256":  "4dad1200cff45fd9685164c0b197cc3de548031a629403e7b99c4ba454fc3dca"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/ImagePopupWindow.xaml",
+        "Sha256":  "f0a22352adf469131fc0fb816d07cfafa6424bd9e8bf86df65b14cabe4edf6af"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/ImagePopupWindow.xaml.cs",
+        "Sha256":  "41086c688e0c084aec9f6468c02e7e749f28fde9c08a3cee2dd5c582efbcd320"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/MessagePopupWindow.xaml",
+        "Sha256":  "77ca904fbf9983c8d0168b22e6a6916c91859f5efb58e2d3c62e84da05f03a31"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/MessagePopupWindow.xaml.cs",
+        "Sha256":  "45ab05e741ee8d619ad0264c1c2875f36941e539827242de5b4c599400ff37b6"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/Services/ClientAgent.cs",
+        "Sha256":  "8f6b68e3cb7d38413622e82bbb617e61b1d310124f2f115573f130770b087d99"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/Services/ClientOptions.cs",
+        "Sha256":  "f82c64fb3a794af58d6c7b81212e8d14ec7b714e6b5744eb6babf668a93f0192"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/Services/IdleMonitor.cs",
+        "Sha256":  "880767aaf0ee7b093fe7e60d4c980f57ca1f64579a3eb8b06a6fc86837734244"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/Services/LocalSettingsCache.cs",
+        "Sha256":  "9b32f9ebb6c895f6e1c67769c1c34e9f0d6b023fe2785281aaa2d432f3315935"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/Services/SleepGuard.cs",
+        "Sha256":  "992ca10eedb1c28de0e5df125c77cc38af77cd7a2a239e00071fcfde4406eb8b"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/Services/StartupManager.cs",
+        "Sha256":  "497fad9ecd860ab43c29d0600b5f31e256b640a4ae174532a884286b7e7bbb77"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/Theme.xaml",
+        "Sha256":  "cfa74c4472a6aee611296daa5cdba68eaf03800d0b3198008b6bc296659eb933"
+    },
+    {
+        "Path":  "src/AutoShutdown.Client/appsettings.example.json",
+        "Sha256":  "224535d06628d9054c8580759613a50715efc2e85345214d19bb94ea40812668"
+    },
+    {
+        "Path":  "src/AutoShutdown.DeploymentService/AutoShutdown.DeploymentService.csproj",
+        "Sha256":  "9e9f00926d303ea87551a1d5e5df31ae03ccb451fb40aa46245813326c7c6e10"
+    },
+    {
+        "Path":  "src/AutoShutdown.DeploymentService/DeploymentWorker.cs",
+        "Sha256":  "803eaa4b4e84a212b86d4ed2a0a9eb072ac783a2ffa834988de9e0c11606e05a"
+    },
+    {
+        "Path":  "src/AutoShutdown.DeploymentService/DeviceSession.cs",
+        "Sha256":  "e1594437b0f57fd1df2ecb03ffe9e64d2816d985e774b027edcee0c80096c11d"
+    },
+    {
+        "Path":  "src/AutoShutdown.DeploymentService/InstallLedger.cs",
+        "Sha256":  "ec76921641ea3a79420d77b92fd401e6930acfcc9b36d6c9199a5ac6322d9ff6"
+    },
+    {
+        "Path":  "src/AutoShutdown.DeploymentService/InstallWorker.Applications.cs",
+        "Sha256":  "d0640c27f07597333701fd531aa74692a075ce1a18b83731838c0094ceea5a61"
+    },
+    {
+        "Path":  "src/AutoShutdown.DeploymentService/InstallWorker.cs",
+        "Sha256":  "a3e584921b60bb559f58bbe4eb6ed38dd091ecb96e68bc2b7dfdb8b79374902c"
+    },
+    {
+        "Path":  "src/AutoShutdown.DeploymentService/Program.cs",
+        "Sha256":  "a6696be2b8bac21832cf6e361bed352fd385122ed0f0d1b24d72c29bdd949d86"
+    },
+    {
+        "Path":  "src/AutoShutdown.DeploymentService/ServiceConstants.cs",
+        "Sha256":  "7ef380dfd767a1b34817fe54da4ed08627098316fb997b31cfd8b6a6829c39cc"
+    },
+    {
+        "Path":  "src/AutoShutdown.DeploymentService/ServiceJournal.cs",
+        "Sha256":  "2bbf388a3ac76ed0e6a3edbdb9c3fff220238a13807d44cd05d8f1f0aba8f968"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/Administration.cs",
+        "Sha256":  "ea4fad0c52dd356eec4d437cbf5b21cff4324b1e74d8cc7bcd137c4a741c5d37"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/AppDiagnostics.cs",
+        "Sha256":  "71f561bcccc5445197bd1e0f75a779e2512ffe8ad6c8e1c95e6766b88f3c423d"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/AppExitState.cs",
+        "Sha256":  "7b236ad83631c7bbeea82b5ac554496fcb5be470368a76db52db5f9f05d85cd9"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/ApplicationPackagePolicy.cs",
+        "Sha256":  "021546b9d01b068b9ae1420ee1add6558c567ab6ced080e3c7b48bdcc7fa7417"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/AutoShutdown.Shared.csproj",
+        "Sha256":  "e2c08643e21eba9123e4b319840fec508efc44b473a7cab491d6188e5f6905ca"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/ClientDeploymentStatus.cs",
+        "Sha256":  "c29c5cfd6303f99025119ea4962e1673aa0f283991355e76dca49a3187e1f998"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/Contracts.cs",
+        "Sha256":  "b651ed994bb4e49f7864069e2352791e852bc3daed06bbdc4dd7bc74ad659115"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/DeploymentContracts.cs",
+        "Sha256":  "bba80d3aabf8aa0a21d68913890aa7166a14cb174b41a8567444c1c593c8a201"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/DeploymentNetwork.cs",
+        "Sha256":  "eeb1238837204ff3f262f02d6734a400f55f72cab9ab46fb8be5922ca204d019"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/InactivityPolicy.cs",
+        "Sha256":  "46f53b0e990cb6232b4a4c0ef02b560fd146cf240d28d015cd3549766ed98a40"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/InstallBatchContracts.cs",
+        "Sha256":  "5d0a3b308804a100d89c8254ce9fd9a195b8017b7178dd24d928d84957293bc4"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/InstallContracts.cs",
+        "Sha256":  "bda405b6556aff36b038a37b357edd5079b1e86d3e623acdb4ad7647e48f27ce"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/InstallerCatalog.cs",
+        "Sha256":  "859857ec09f0ed02fcdeaa0d1f4cfca6e8bf3a6025d589ff653a1ccbc78a6a2f"
+    },
+    {
+        "Path":  "src/AutoShutdown.Shared/WindowsInstallerMetadata.cs",
+        "Sha256":  "28ec2164171a6a3dacdaec05ba7f34a904a6c50c1fda1871ab1d68cfb1dd62d9"
+    },
+    {
+        "Path":  "tests/AdminSecurityChecks/AdminSecurityChecks.csproj",
+        "Sha256":  "cfcbc5f0ad814975dc56db721e269a08554b60464478a8843b2ce34955aa92de"
+    },
+    {
+        "Path":  "tests/AdminSecurityChecks/Program.cs",
+        "Sha256":  "a92e02594bb9da2e48b39a5db56d3fd64612f1cd4916116ad02aa65764c15334"
+    },
+    {
+        "Path":  "tests/InstallBatchChecks/InstallBatchChecks.csproj",
+        "Sha256":  "2e38d5c415465170d3936ad28ec316abbcc871122ebb84110403069283a78a6c"
+    },
+    {
+        "Path":  "tests/InstallBatchChecks/Program.cs",
+        "Sha256":  "3e2aa62d9ef9c2a1e8e2a3fa514e46ecea323fbc5a41c109fe6eef2c5baf8ee8"
+    },
+    {
+        "Path":  "tools/msi/Build-BothMSI.ps1",
+        "Sha256":  "88d12e25046a75ae6e333867d4d32ce5dc0efa01bcc6dd064e8edb50d0f01504"
+    },
+    {
+        "Path":  "tools/msi/Install-LTAdmin.ps1",
+        "Sha256":  "8d5e98a8a091fd0455c7224257fa4fbc41cebe44028daf86846878dc3ef6bfa4"
+    },
+    {
+        "Path":  "tools/msi/Install-LTClient.ps1",
+        "Sha256":  "231722cb3172b5ad61a35a5a4703ea91a8ccb132f94acfdbff2b1b1403659c10"
+    },
+    {
+        "Path":  "tools/msi/README-DEPLOY.md",
+        "Sha256":  "706d2810c3e211ee116b54460810db08f780b4f32df9caa0166b88c9093771da"
+    },
+    {
+        "Path":  "tools/msi/README.md",
+        "Sha256":  "ba7e3e487f3b1a4f66cfeea3f380da858f0afc3b1b3bc7728abadbfce99f3ea3"
+    },
+    {
+        "Path":  "tools/msi/client-ui/StartupManager.cs",
+        "Sha256":  "497fad9ecd860ab43c29d0600b5f31e256b640a4ae174532a884286b7e7bbb77"
+    },
+    {
+        "Path":  "tools/msi/installer/Admin/Admin.wxs",
+        "Sha256":  "d2ddf83e8a394902f975c4244b5189f7a1f5166ac118673aae68dcd83c2dff68"
+    },
+    {
+        "Path":  "tools/msi/installer/Admin/Msi-Preflight.ps1",
+        "Sha256":  "73bd689952516d8112873b5fb7fb6abc7b3d0a672a111a13beb8e004563aa974"
+    },
+    {
+        "Path":  "tools/msi/installer/Admin/Test-AdminMsi.ps1",
+        "Sha256":  "88e73f0726c012fbb5ccb3adbfe52a55dca8c3db27428346f9a6e5cd6c8c40cc"
+    },
+    {
+        "Path":  "tools/msi/installer/Client/Client.wxs",
+        "Sha256":  "b107133eb9c52291dec59614666bb804e542a3828120b8d8c77086de2e14aa4b"
+    },
+    {
+        "Path":  "tools/msi/installer/Client/Connect-ClientWizard.ps1",
+        "Sha256":  "a9ef9df6038d538ae0e51c85e207bc126e3e9077e2567ac9285f59e9d3379f40"
+    },
+    {
+        "Path":  "tools/msi/installer/Client/Connect-NovaClient.ps1",
+        "Sha256":  "1f93644fb97c6ab457e568e544c8a08942c05c3bb5b16e492b7d3497e80fb798"
+    },
+    {
+        "Path":  "tools/msi/installer/Client/Msi-Preflight.ps1",
+        "Sha256":  "6af71a84e60576709b48f4fbde095f41e05611dd55913d5d9f35dd06bc73d837"
+    },
+    {
+        "Path":  "tools/msi/installer/Client/Msi-VerifyInstallation.ps1",
+        "Sha256":  "7ed265730f697bb1a9d71f0ddc44b73f574b00238941d9400cdfbde0c17017ae"
+    },
+    {
+        "Path":  "tools/msi/installer/Client/Open-LTClient.ps1",
+        "Sha256":  "03f686882758706d5ad3076e6c78f99dfff836a053659f94c05ec0e1ec4d76a6"
+    },
+    {
+        "Path":  "tools/msi/installer/Client/Start-ManagedClient.ps1",
+        "Sha256":  "d1e3ae81701280eac2bedc1cbdfdbda51ddb5d1c8c73c4b325b54ce6855e336b"
+    },
+    {
+        "Path":  "tools/msi/installer/Client/Test-ClientMsi.ps1",
+        "Sha256":  "8c094772c608f9cc327bec9131c0267d63aadcb05f71b69698c841c770fbb348"
+    },
+    {
+        "Path":  "tools/msi/kit-files.json",
+        "Sha256":  "5b602543ff5aa6dbc72e776908ee3e02dddacf4fb172ed3737a39db2cf9cb131"
+    },
+    {
+        "Path":  "tools/msi/scripts/Configure-DeploymentLanFirewall.ps1",
+        "Sha256":  "03d4b82ef361f085c06399e41a0e6af66bd6d61fcd8ebd029b95700517e7a321"
+    },
+    {
+        "Path":  "tools/msi/scripts/DeploymentService-Common.ps1",
+        "Sha256":  "cca7a6863b257bc973bf6a629b043a568a2e1bc0d8145e7462eea27fe0ddd5a9"
+    },
+    {
+        "Path":  "tools/msi/scripts/Import-DeploymentConnection.ps1",
+        "Sha256":  "e1e1cc641de3e5d03ec111020a4d55080eb8ee09a86a1f3061c65d5c90f9173f"
+    },
+    {
+        "Path":  "tools/msi/scripts/Test-DeploymentService.ps1",
+        "Sha256":  "a392eb0dfaa3d68a778d3882bc738491fba9fa5844cd23db9d05d34ca27ca96e"
+    },
+    {
+        "Path":  "tools/msi/scripts/Uninstall-DeploymentService.ps1",
+        "Sha256":  "ad73424a03ae65b7b249edef6c2b47d6bf8b2d3e16c61ede2371f7b321fa001c"
+    },
+    {
+        "Path":  "tools/msi/ui-fix/files.json",
+        "Sha256":  "af74748fc51e8578defc6acca0a49b0460bb4d262686b1dc14c5702d509947c3"
+    },
+    {
+        "Path":  "tools/msi/ui-fix/payload/src/AutoShutdown.Admin/MainWindow.Installation.Batch.cs",
+        "Sha256":  "a2ac61a3b28c264387a2adeaf307634b82fec68686ba40691627b13591db6220"
+    },
+    {
+        "Path":  "tools/msi/ui-fix/payload/src/AutoShutdown.Admin/MainWindow.Installation.cs",
+        "Sha256":  "96051bac73244312899967844864571988f5be8fc1760e1281388e0527b992d6"
+    },
+    {
+        "Path":  "tools/msi/ui-fix/payload/src/AutoShutdown.Admin/MainWindow.xaml",
+        "Sha256":  "fa846995f71e909609bdfb12209467d1a333a7e48eac66a811803f4b16ce33e7"
+    }
+]

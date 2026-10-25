@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+  <Package Name="L&amp;T Client" Manufacturer="L&amp;T Admin Project" Version="0.5.5" UpgradeCode="53C4C56F-968F-4C26-B59A-9F01D779FD6C" Scope="perMachine" InstallerVersion="500" Language="1033">
+    <MajorUpgrade Schedule="afterInstallInitialize" DowngradeErrorMessage="A newer L&amp;T Client is already installed." />
+    <MediaTemplate EmbedCab="yes" CompressionLevel="high" />
+    <Property Id="ARPNOREPAIR" Value="1" />
+    <Property Id="ARPNOMODIFY" Value="1" />
+    <Property Id="MSIRESTARTMANAGERCONTROL" Value="Disable" />
+    <Property Id="EXISTING_NOVA_SERVICE">
+      <RegistrySearch Id="ExistingNovaService" Root="HKLM" Key="SYSTEM\CurrentControlSet\Services\NovaDeploymentService" Name="ImagePath" Type="raw" Bitness="always64" />
+    </Property>
+    <Launch Condition="Installed OR WIX_UPGRADE_DETECTED OR NOT EXISTING_NOVA_SERVICE" Message="An unmanaged deployment service exists. Use the existing source update workflow rather than replacing it with MSI." />
+    <Launch Condition="NOT Installed OR REMOVE=&quot;ALL&quot;" Message="Repair and modify are disabled. Do not interrupt an active installation job." />
+    <SetProperty Id="NovaPreflightBefore" Before="NovaPreflightBefore" Sequence="execute" Value="&quot;[System64Folder]WindowsPowerShell\v1.0\powershell.exe&quot; -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand $(PreflightEncoded)" />
+    <SetProperty Id="NovaPreflightAfter" Before="NovaPreflightAfter" Sequence="execute" Value="&quot;[System64Folder]WindowsPowerShell\v1.0\powershell.exe&quot; -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand $(PreflightEncoded)" />
+    <SetProperty Id="NovaVerifyInstalled" Before="NovaVerifyInstalled" Sequence="execute" Value="&quot;[System64Folder]WindowsPowerShell\v1.0\powershell.exe&quot; -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand $(VerifyEncoded)" />
+    <CustomAction Id="NovaPreflightBefore" BinaryRef="Wix4UtilCA_$(sys.BUILDARCHSHORT)" DllEntry="WixQuietExec" Execute="deferred" Impersonate="no" Return="check" />
+    <CustomAction Id="NovaPreflightAfter" BinaryRef="Wix4UtilCA_$(sys.BUILDARCHSHORT)" DllEntry="WixQuietExec" Execute="deferred" Impersonate="no" Return="check" />
+    <CustomAction Id="NovaVerifyInstalled" BinaryRef="Wix4UtilCA_$(sys.BUILDARCHSHORT)" DllEntry="WixQuietExec" Execute="deferred" Impersonate="no" Return="check" />
+    <InstallExecuteSequence>
+      <Custom Action="NovaPreflightBefore" Before="StopServices" />
+      <Custom Action="NovaPreflightAfter" After="StopServices" />
+      <Custom Action="NovaVerifyInstalled" After="StartServices" Condition="NOT Installed" />
+    </InstallExecuteSequence>
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="CLIENTROOT" Name="AutoShutdown.Nova.Client">
+        <Directory Id="CLIENTSCRIPTS" Name="scripts" />
+      </Directory>
+      <Directory Id="SERVICEROOT" Name="AutoShutdown.Nova.DeploymentService" />
+    </StandardDirectory>
+    <StandardDirectory Id="CommonAppDataFolder">
+      <Directory Id="SERVICEDATA" Name="AutoShutdown.Nova.DeploymentService" />
+      <Directory Id="PUBLICSTATUS" Name="AutoShutdown.Nova.DeploymentStatus" />
+    </StandardDirectory>
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="NOVAMENU" Name="AutoShutdown Nova" />
+    </StandardDirectory>
+    <ComponentGroup Id="ClientPayload" Directory="CLIENTROOT">
+      <Files Include="$(AppPublish)\**">
+        <Exclude Files="$(AppPublish)\appsettings.json" />
+        <Exclude Files="$(AppPublish)\AutoShutdown.SystemB.exe" />
+      </Files>
+      <Component Id="ClientExecutable" Guid="*">
+        <File Id="ClientExe" Source="$(AppPublish)\AutoShutdown.SystemB.exe" KeyPath="yes">
+          </File>
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="ServicePayload" Directory="SERVICEROOT">
+      <Files Include="$(ServicePublish)\**">
+        <Exclude Files="$(ServicePublish)\AutoShutdown.DeploymentService.exe" />
+      </Files>
+      <Component Id="ServiceExecutable" Guid="*">
+        <File Id="ServiceExe" Source="$(ServicePublish)\AutoShutdown.DeploymentService.exe" KeyPath="yes" />
+        <ServiceInstall Id="NovaServiceInstall" Name="NovaDeploymentService" DisplayName="Nova Deployment Service" Description="L&amp;T approved software deployment service." Type="ownProcess" Start="auto" ErrorControl="normal" Account="LocalSystem" Vital="yes">
+          <util:ServiceConfig FirstFailureActionType="restart" SecondFailureActionType="restart" ThirdFailureActionType="restart" ResetPeriodInDays="1" RestartServiceDelayInSeconds="30" />
+        </ServiceInstall>
+        <ServiceControl Id="NovaServiceControl" Name="NovaDeploymentService" Start="install" Stop="both" Remove="uninstall" Wait="yes" />
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="ClientSupport" Directory="CLIENTSCRIPTS">
+      <Files Include="$(SupportScripts)\**">
+        <Exclude Files="$(SupportScripts)\Start-ManagedClient.ps1" />
+      </Files>
+      <Component Id="ManagedStartup" Guid="*">
+        <File Id="ClientStartupScript" Source="$(SupportScripts)\Start-ManagedClient.ps1" KeyPath="yes" />
+        <RegistryValue Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\Run" Name="AutoShutdownNovaClient" Type="string" Value="&quot;[System64Folder]WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File &quot;[#ClientStartupScript]&quot;" />
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="ClientIntegration">
+      <Component Id="ClientBinaryFolder" Directory="CLIENTROOT" Guid="A8E92C44-F628-4F55-A23D-D8DD3241C4EA">
+        <CreateFolder>
+          <PermissionEx Sddl="O:BAG:BAD:P(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;AU)" />
+        </CreateFolder>
+      </Component>
+      <Component Id="ServiceBinaryFolder" Directory="SERVICEROOT" Guid="CF2AA9E3-C060-4502-B79A-4BE0F2526E64">
+        <CreateFolder>
+          <PermissionEx Sddl="O:BAG:BAD:P(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)" />
+        </CreateFolder>
+      </Component>
+      <Component Id="PrivateDataFolder" Directory="SERVICEDATA" Guid="8C18EE6B-437A-4B23-8B2E-FB2D3A91A1C7">
+        <CreateFolder>
+          <PermissionEx Sddl="O:BAG:BAD:P(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)" />
+        </CreateFolder>
+      </Component>
+      <Component Id="PublicStatusFolder" Directory="PUBLICSTATUS" Guid="D1A62B75-BB54-4F6C-980E-6342E5BB71A0">
+        <CreateFolder>
+          <PermissionEx Sddl="O:BAG:BAD:P(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1200a9;;;AU)" />
+        </CreateFolder>
+      </Component>
+      <Component Id="ClientMenu" Directory="NOVAMENU" Guid="*">
+        <RemoveFolder Id="RemoveNovaMenu" On="uninstall" />
+        <RegistryValue Root="HKLM" Key="Software\AutoShutdown.Nova\ClientMsi" Name="InstallDirectory" Type="string" Value="[CLIENTROOT]" KeyPath="yes" />
+        <Shortcut Id="ClientShortcut" Directory="NOVAMENU" Name="L&amp;T Client" Target="[System64Folder]WindowsPowerShell\v1.0\powershell.exe" Arguments="-NoProfile -ExecutionPolicy Bypass -File &quot;[CLIENTSCRIPTS]Open-LTClient.ps1&quot;" WorkingDirectory="CLIENTROOT" />
+        <Shortcut Id="ConnectShortcut" Directory="NOVAMENU" Name="Connect L&amp;T Client to Admin" Target="[System64Folder]WindowsPowerShell\v1.0\powershell.exe" Arguments="-NoProfile -ExecutionPolicy Bypass -File &quot;[CLIENTSCRIPTS]Connect-ClientWizard.ps1&quot;" WorkingDirectory="CLIENTROOT" />
+      </Component>
+    </ComponentGroup>
+    <Feature Id="Complete" Title="L&amp;T Client and background installer" Level="1">
+      <ComponentGroupRef Id="ClientPayload" />
+      <ComponentGroupRef Id="ServicePayload" />
+      <ComponentGroupRef Id="ClientSupport" />
+      <ComponentGroupRef Id="ClientIntegration" />
+    </Feature>
+  </Package>
+</Wix>

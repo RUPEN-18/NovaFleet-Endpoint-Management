@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.cs text eol=lf
+*.xaml text eol=lf
+*.csproj text eol=lf
+*.ps1 text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.png binary
+*.docx binary
+# Preserve checksum-verified MSI build-kit bytes.
+tools/msi/** -text

@@ -1,0 +1,106 @@
+[
+    {
+        "Path":  "Build-BothMSI.ps1",
+        "Sha256":  "88D12E25046A75AE6E333867D4D32CE5DC0EFA01BCC6DD064E8EDB50D0F01504"
+    },
+    {
+        "Path":  "Install-LTAdmin.ps1",
+        "Sha256":  "8D5E98A8A091FD0455C7224257FA4FBC41CEBE44028DAF86846878DC3EF6BFA4"
+    },
+    {
+        "Path":  "Install-LTClient.ps1",
+        "Sha256":  "231722CB3172B5AD61A35A5A4703EA91A8CCB132F94ACFDBFF2B1B1403659C10"
+    },
+    {
+        "Path":  "README-DEPLOY.md",
+        "Sha256":  "706D2810C3E211EE116B54460810DB08F780B4F32DF9CAA0166B88C9093771DA"
+    },
+    {
+        "Path":  "README.md",
+        "Sha256":  "BA7E3E487F3B1A4F66CFEEA3F380DA858F0AFC3B1B3BC7728ABADBFCE99F3EA3"
+    },
+    {
+        "Path":  "client-ui\\StartupManager.cs",
+        "Sha256":  "497FAD9ECD860AB43C29D0600B5F31E256B640A4AE174532A884286B7E7BBB77"
+    },
+    {
+        "Path":  "installer\\Admin\\Admin.wxs",
+        "Sha256":  "D2DDF83E8A394902F975C4244B5189F7A1F5166AC118673AAE68DCD83C2DFF68"
+    },
+    {
+        "Path":  "installer\\Admin\\Msi-Preflight.ps1",
+        "Sha256":  "73BD689952516D8112873B5FB7FB6ABC7B3D0A672A111A13BEB8E004563AA974"
+    },
+    {
+        "Path":  "installer\\Admin\\Test-AdminMsi.ps1",
+        "Sha256":  "88E73F0726C012FBB5CCB3ADBFE52A55DCA8C3DB27428346F9A6E5CD6C8C40CC"
+    },
+    {
+        "Path":  "installer\\Client\\Client.wxs",
+        "Sha256":  "B107133EB9C52291DEC59614666BB804E542A3828120B8D8C77086DE2E14AA4B"
+    },
+    {
+        "Path":  "installer\\Client\\Connect-ClientWizard.ps1",
+        "Sha256":  "A9EF9DF6038D538AE0E51C85E207BC126E3E9077E2567AC9285F59E9D3379F40"
+    },
+    {
+        "Path":  "installer\\Client\\Connect-NovaClient.ps1",
+        "Sha256":  "1F93644FB97C6AB457E568E544C8A08942C05C3BB5B16E492B7D3497E80FB798"
+    },
+    {
+        "Path":  "installer\\Client\\Msi-Preflight.ps1",
+        "Sha256":  "6AF71A84E60576709B48F4FBDE095F41E05611DD55913D5D9F35DD06BC73D837"
+    },
+    {
+        "Path":  "installer\\Client\\Msi-VerifyInstallation.ps1",
+        "Sha256":  "7ED265730F697BB1A9D71F0DDC44B73F574B00238941D9400CDFBDE0C17017AE"
+    },
+    {
+        "Path":  "installer\\Client\\Open-LTClient.ps1",
+        "Sha256":  "03F686882758706D5AD3076E6C78F99DFFF836A053659F94C05EC0E1EC4D76A6"
+    },
+    {
+        "Path":  "installer\\Client\\Start-ManagedClient.ps1",
+        "Sha256":  "D1E3AE81701280EAC2BEDC1CBDFDBDA51DDB5D1C8C73C4B325B54CE6855E336B"
+    },
+    {
+        "Path":  "installer\\Client\\Test-ClientMsi.ps1",
+        "Sha256":  "8C094772C608F9CC327BEC9131C0267D63AADCB05F71B69698C841C770FBB348"
+    },
+    {
+        "Path":  "scripts\\Configure-DeploymentLanFirewall.ps1",
+        "Sha256":  "03D4B82EF361F085C06399E41A0E6AF66BD6D61FCD8EBD029B95700517E7A321"
+    },
+    {
+        "Path":  "scripts\\DeploymentService-Common.ps1",
+        "Sha256":  "CCA7A6863B257BC973BF6A629B043A568A2E1BC0D8145E7462EEA27FE0DDD5A9"
+    },
+    {
+        "Path":  "scripts\\Import-DeploymentConnection.ps1",
+        "Sha256":  "E1E1CC641DE3E5D03EC111020A4D55080EB8EE09A86A1F3061C65D5C90F9173F"
+    },
+    {
+        "Path":  "scripts\\Test-DeploymentService.ps1",
+        "Sha256":  "A392EB0DFAA3D68A778D3882BC738491FBA9FA5844CD23DB9D05D34CA27CA96E"
+    },
+    {
+        "Path":  "scripts\\Uninstall-DeploymentService.ps1",
+        "Sha256":  "AD73424A03AE65B7B249EDEF6C2B47D6BF8B2D3E16C61EDE2371F7B321FA001C"
+    },
+    {
+        "Path":  "ui-fix\\files.json",
+        "Sha256":  "AF74748FC51E8578DEFC6ACCA0A49B0460BB4D262686B1DC14C5702D509947C3"
+    },
+    {
+        "Path":  "ui-fix\\payload\\src\\AutoShutdown.Admin\\MainWindow.Installation.Batch.cs",
+        "Sha256":  "A2AC61A3B28C264387A2ADEAF307634B82FEC68686BA40691627B13591DB6220"
+    },
+    {
+        "Path":  "ui-fix\\payload\\src\\AutoShutdown.Admin\\MainWindow.Installation.cs",
+        "Sha256":  "96051BAC73244312899967844864571988F5BE8FC1760E1281388E0527B992D6"
+    },
+    {
+        "Path":  "ui-fix\\payload\\src\\AutoShutdown.Admin\\MainWindow.xaml",
+        "Sha256":  "FA846995F71E909609BDFB12209467D1A333A7E48EAC66A811803F4B16CE33E7"
+    }
+]

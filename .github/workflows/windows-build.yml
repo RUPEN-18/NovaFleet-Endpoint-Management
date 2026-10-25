@@ -1,0 +1,22 @@
+name: Windows recovered source checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build and run recovery checks
+        shell: powershell
+        run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\Verify-RecoveredSource.ps1

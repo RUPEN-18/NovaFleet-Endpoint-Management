@@ -1,0 +1,12 @@
+<Window x:Class="AutoShutdown.Client.MessagePopupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Admin Message" Width="640" Height="390" WindowStartupLocation="CenterScreen" Topmost="True" Background="{StaticResource WindowGradient}">
+    <Border Margin="18" Style="{StaticResource GlassCard}">
+        <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+            <TextBlock x:Name="TitleText" Text="ADMIN MESSAGE" Style="{StaticResource SectionTitle}" Foreground="{StaticResource BrushCyan}"/>
+            <TextBlock Grid.Row="1" x:Name="BodyText" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="{StaticResource BrushWhiteText}" Margin="20"/>
+            <Button Grid.Row="2" Content="ACKNOWLEDGE" Style="{StaticResource PrimaryButton}" Height="46" Click="CloseButton_Click"/>
+        </Grid>
+    </Border>
+</Window>
